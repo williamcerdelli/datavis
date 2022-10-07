@@ -14,8 +14,20 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/up.csv"
+        "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/finale.csv"
       },
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["continent"],
+          "bind": "legend"
+        } 
+      },
+      "opacity": {
+        "condition": {"selection": "continent_highlight", "value": 0.6},
+        "value": 0.2
+      },
+ 
       "mark": {"type": "circle", "tooltip": {"content": "data"}, "opacity":0.8, "color":"red"},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
@@ -24,13 +36,35 @@
           "field": "Proportion of fighters",
           "type": "quantitative",
           "title": "Percentage of UFC fighters",
-          "scale": {"domain": [0.01,6,10,20,30]}
+          "scale": {"domain": [0.06,10,20,30]}
 
         },
-        "color": {
+"color": {
       "field": "continent",
-      "type": "nominal"
-        },
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Northern America",
+          "South America",
+          "Central America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+    ], "range": [
+          "#FFFF00",
+          "#984ea3",
+          "grey",
+          "#ff7f00",
+          "#FF0000",
+          "#377eb8",
+          "#a65628"
+    ] }
+    },
+"opacity": {
+  "value": 0.9
+},
+
 
 
 
