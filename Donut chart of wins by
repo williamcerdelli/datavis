@@ -8,8 +8,8 @@
     "theta": {"field": "n", "type": "quantitative"},
     "color": {"field": "winby", "type": "nominal"},
     "tooltip": [
-      {"field": "winby", "type": "nominal", "title": "Won by"},
-      {"field": "n", "type": "quantitative" , "title": "Numbers of win"}
+      {"field": "winby", "type": "nominal", "title": "Result"},
+      {"field": "n", "type": "quantitative" , "title": "Number of times"}
     ]
     
     }
