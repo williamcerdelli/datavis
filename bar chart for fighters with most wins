@@ -5,5 +5,10 @@
 },
 "mark": "bar", "encoding": {
 "x": { "field": "n", "type": "quantitative","title": "Wins" },
-"y": { "field": "fighter", "type": "nominal" } }
+"y": { "field": "fighter", "type": "nominal" },
+"tooltip": [
+      {"field": "fighter", "type": "nominal", "title": "Fighter"},
+      {"field": "n", "type": "quantitative" , "title": "Number of wins"}
+    ]
+    }
 }
