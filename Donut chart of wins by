@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+    "url":"https://raw.githubusercontent.com/williamcerdelli/datavis/main/winner_by.csv"},
+  "mark": {"type": "arc", "innerRadius": 50},
+  "encoding": {
+    "theta": {"field": "n", "type": "quantitative"},
+    "color": {"field": "winby", "type": "nominal"},
+    "tooltip": [
+      {"field": "winby", "type": "nominal", "title": "Won by"},
+      {"field": "n", "type": "quantitative" , "title": "Numbers of win"}
+    ]
+    
+    }
+  
+ 
+}
