@@ -1,0 +1,9 @@
+{
+"$schema": "https://vega.github.io/schema/vega-lite/v5.json", "title": { "text": "Fighters with most wins" },
+"data": {
+"url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/fighterwins.csv"
+},
+"mark": "bar", "encoding": {
+"x": { "field": "n", "type": "quantitative","title": "Wins" },
+"y": { "field": "fighter", "type": "nominal" } }
+}
