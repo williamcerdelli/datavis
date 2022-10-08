@@ -7,13 +7,11 @@
   "layer": [
     {
       "data": {
-    "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+    "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/water",
     "format": {"type": "topojson", "feature": "oceans"}
   },
   "mark": {"type": "geoshape", "fill": "skyblue"}
 },
-      
-  
 
 {
 
@@ -27,17 +25,13 @@
       "data": {
         "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/finale.csv"
       },
-      "selection": {
-        "continent_highlight": {
-          "type": "multi",
-          "fields": ["continent"],
-          "bind": "legend"
-        } 
-      },
-      "opacity": {
-        "condition": {"selection": "continent_highlight", "value": 0.6},
-        "value": 0.2
-      },
+      "params":[
+        {
+        "name": "continent_highlight",
+        "select":{"type":"point", "fields":["continent"]},
+        "bind":"legend"
+        }
+      ],
  
       "mark": {"type": "circle", "tooltip": {"content": "data"}, "opacity":0.8, "color":"red"},
       "encoding": {
@@ -73,10 +67,9 @@
     ] }
     },
 "opacity": {
-  "value": 0.9
-},
-
-
+        "condition": {"param": "continent_highlight", "value": 0.9},
+        "value": 0.2
+      },
 
 
       "tooltip": [
