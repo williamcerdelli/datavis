@@ -1,0 +1,57 @@
+{
+  "width": 900,
+  "height": 300,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/winner_by_year.csv"
+  },
+  
+  "params": [
+     {
+        "name": "Win_method",
+        "select":{"type":"point", "fields":["winby"]},
+        "bind":"legend"
+        },
+    {
+      "name": "Fight",
+      "select": {"type": "point", "fields": ["Date"]},
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "2014",
+          "2015",
+          "2016",
+          "2017"
+        ],
+        "labels": [
+          "Show All",
+          "2014",
+          "2015",
+          "2016",
+          "2017"
+        ]
+      }
+    }
+  ],
+  "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+  "encoding": {
+    "x": {"field": "proportion", "type": "quantitative"},
+    "y": {"field": "Date", "type": "ordinal"},
+    "color": {"field": "winby"},
+    
+    "opacity": {
+        "condition": {"param": "Win_method", "value": 1},
+        "value": 0.2
+      },
+
+
+
+    "tooltip": [
+      {"field": "winby", "type": "nominal", "title": "Result"},
+      {"field": "proportion", "type": "quantitative" , "title": "Percenatge of wins by this way", "format":".2%"},
+      {"field": "n", "type": "quantitative" , "title": "Number of times"}
+    ]
+  },
+  "config": {}
+}
