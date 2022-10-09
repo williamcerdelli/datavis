@@ -68,14 +68,14 @@
       ]
     },
     {
-      "mark": {"type": "text", "yOffset": -50},
+      "mark": {"type": "text", "yOffset": -200},
       "encoding": {
         "text": {"field": "n", "type": "quantitative"},
         "color": {"value": "black"}
       }
     },
     {
-      "mark": {"type": "text", "yOffset": -72},
+      "mark": {"type": "text", "yOffset": -252},
       "encoding": {
         "text": {"field": "winby", "type": "nominal"},
         "color": {"value": "black"}
