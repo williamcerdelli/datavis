@@ -1,6 +1,7 @@
 {
   "width": 1000,
   "height": 500,
+  "title": "Fight results from 2014-2017",
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/winner_by_year.csv"
