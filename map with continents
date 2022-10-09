@@ -41,12 +41,13 @@
           "field": "Proportion of fighters",
           "type": "quantitative",
           "title": "Percentage of UFC fighters",
-          "scale": {"domain": [0.06,10,20,30]}
+          "scale": {"domain": [0.00000001,5,10,20,30,50]}
 
         },
 "color": {
       "field": "continent",
       "type": "nominal",
+      "title": "Continents/Regions",
       "scale": {
         "domain": [
           "Northern America",
