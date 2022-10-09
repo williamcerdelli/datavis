@@ -72,7 +72,7 @@
         "color": {"value": "white"},
     "opacity": {
       "condition": {
-        "test": "(datum['winby'] == 'DEC' || datum['winby'] == 'SUB' || datum['winby'] == 'KO/TKO') && datum['Date'] == '2014'",
+        "test": "(datum['winby'] == 'KO/TKO') && datum['Date'] == '2014'",
 "value": 1 },
 "value": 0},
 
@@ -104,13 +104,89 @@
         "text": {"field": "proportion", "format": ".2%"}
       }
     },
+     {
+      "mark": {"type": "text", "yOffset": 400},
+      "encoding": {
+        "color": {"value": "white"},
+    "opacity": {
+      "condition": {
+        "test": "(datum['winby'] == 'SUB') && datum['Date'] == '2014'",
+"value": 1 },
+"value": 0},
+
+        "y": {
+          "field": "proportion",
+          "type": "quantitative",
+          "stack": "zero"
+        },
+        "x": {"field": "Date", "type": "ordinal"},
+        "text": {"field": "proportion", "format": ".2%"}
+      }
+    },
+     {
+      "mark": {"type": "text", "yOffset":-170},
+      "encoding": {
+        "color": {"value": "white"},
+    "opacity": {
+      "condition": {
+        "test": "(datum['winby'] == 'DEC') && datum['Date'] == '2014'",
+"value": 1 },
+"value": 0},
+
+        "y": {
+          "field": "proportion",
+          "type": "quantitative",
+          "stack": "zero"
+        },
+        "x": {"field": "Date", "type": "ordinal"},
+        "text": {"field": "proportion", "format": ".2%"}
+      }
+    },
     {
       "mark": {"type": "text", "yOffset":190},
       "encoding": {
         "color": {"value": "white"},
     "opacity": {
       "condition": {
-        "test": "(datum['winby'] == 'DEC' || datum['winby'] == 'SUB' || datum['winby'] == 'KO/TKO') && datum['Date'] == '2015'",
+        "test": "(datum['winby'] == 'KO/TKO') && datum['Date'] == '2015'",
+"value": 1 },
+"value": 0},
+
+        "y": {
+          "field": "proportion",
+          "type": "quantitative",
+          "stack": "zero"
+        },
+        "x": {"field": "Date", "type": "ordinal"},
+        "text": {"field": "proportion", "format": ".2%"}
+      }
+    },
+     {
+      "mark": {"type": "text", "yOffset": 400},
+      "encoding": {
+        "color": {"value": "white"},
+    "opacity": {
+      "condition": {
+        "test": "(datum['winby'] == 'SUB') && datum['Date'] == '2015'",
+"value": 1 },
+"value": 0},
+
+        "y": {
+          "field": "proportion",
+          "type": "quantitative",
+          "stack": "zero"
+        },
+        "x": {"field": "Date", "type": "ordinal"},
+        "text": {"field": "proportion", "format": ".2%"}
+      }
+    },
+     {
+      "mark": {"type": "text", "yOffset": -100},
+      "encoding": {
+        "color": {"value": "white"},
+    "opacity": {
+      "condition": {
+        "test": "(datum['winby'] == 'DEC') && datum['Date'] == '2015'",
 "value": 1 },
 "value": 0},
 
@@ -148,7 +224,7 @@
         "color": {"value": "white"},
     "opacity": {
       "condition": {
-        "test": "(datum['winby'] == 'DEC' || datum['winby'] == 'SUB' || datum['winby'] == 'KO/TKO') && datum['Date'] == '2016'",
+        "test": "(datum['winby'] == 'KO/TKO') && datum['Date'] == '2016'",
 "value": 1 },
 "value": 0},
 
@@ -180,13 +256,89 @@
         "text": {"field": "proportion", "format": ".2%"}
       }
     },
+     {
+      "mark": {"type": "text", "yOffset": 400},
+      "encoding": {
+        "color": {"value": "white"},
+    "opacity": {
+      "condition": {
+        "test": "(datum['winby'] == 'SUB') && datum['Date'] == '2016'",
+"value": 1 },
+"value": 0},
+
+        "y": {
+          "field": "proportion",
+          "type": "quantitative",
+          "stack": "zero"
+        },
+        "x": {"field": "Date", "type": "ordinal"},
+        "text": {"field": "proportion", "format": ".2%"}
+      }
+    },
+     {
+      "mark": {"type": "text", "yOffset": -100},
+      "encoding": {
+        "color": {"value": "white"},
+    "opacity": {
+      "condition": {
+        "test": "(datum['winby'] == 'DEC') && datum['Date'] == '2016'",
+"value": 1 },
+"value": 0},
+
+        "y": {
+          "field": "proportion",
+          "type": "quantitative",
+          "stack": "zero"
+        },
+        "x": {"field": "Date", "type": "ordinal"},
+        "text": {"field": "proportion", "format": ".2%"}
+      }
+    },
     {
       "mark": {"type": "text", "yOffset": 180},
       "encoding": {
         "color": {"value": "white"},
     "opacity": {
       "condition": {
-        "test": "(datum['winby'] == 'DEC' || datum['winby'] == 'SUB' || datum['winby'] == 'KO/TKO') && datum['Date'] == '2017'",
+        "test": "(datum['winby'] == 'KO/TKO') && datum['Date'] == '2017'",
+"value": 1 },
+"value": 0},
+
+        "y": {
+          "field": "proportion",
+          "type": "quantitative",
+          "stack": "zero"
+        },
+        "x": {"field": "Date", "type": "ordinal"},
+        "text": {"field": "proportion", "format": ".2%"}
+      }
+    },
+     {
+      "mark": {"type": "text", "yOffset": 400},
+      "encoding": {
+        "color": {"value": "white"},
+    "opacity": {
+      "condition": {
+        "test": "(datum['winby'] == 'SUB') && datum['Date'] == '2017'",
+"value": 1 },
+"value": 0},
+
+        "y": {
+          "field": "proportion",
+          "type": "quantitative",
+          "stack": "zero"
+        },
+        "x": {"field": "Date", "type": "ordinal"},
+        "text": {"field": "proportion", "format": ".2%"}
+      }
+    },
+     {
+      "mark": {"type": "text", "yOffset": -100},
+      "encoding": {
+        "color": {"value": "white"},
+    "opacity": {
+      "condition": {
+        "test": "(datum['winby'] == 'DEC') && datum['Date'] == '2017'",
 "value": 1 },
 "value": 0},
 
