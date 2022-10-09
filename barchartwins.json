@@ -19,9 +19,9 @@
   ],
   "transform": [{"filter": "Fight_Year == null || datum.Date == Fight_Year"}],
   "encoding": {
-    "y": {"field": "n", "type": "quantitative", "title": "number of wins"},
-    "x": {"field": "Date", "type": "ordinal", "title": "year"},
-    "xOffset": {"field": "winby"},
+    "x": {"field": "n", "type": "quantitative", "title": "number of wins"},
+    "y": {"field": "Date", "type": "ordinal", "title": "year"},
+    "yOffset": {"field": "winby"},
     "color": {
       "field": "winby",
       "type": "nominal",
@@ -68,14 +68,14 @@
       ]
     },
     {
-      "mark": {"type": "text", "yOffset": -20},
+      "mark": {"type": "text", "xOffset": 20},
       "encoding": {
         "text": {"field": "n", "type": "quantitative"},
         "color": {"value": "black"}
       }
     },
     {
-      "mark": {"type": "text", "yOffset": -22},
+      "mark": {"type": "text", "xOffset": 60},
       "encoding": {
         "text": {"field": "winby", "type": "nominal"},
         "color": {"value": "black"}
