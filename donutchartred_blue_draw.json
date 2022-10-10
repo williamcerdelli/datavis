@@ -12,7 +12,7 @@
       "field": "winner",
       "type": "nominal",
       "title": "Fight results",
-      "legend":{"labelColor":"white"},
+      "legend":{"labelColor":"white","labelFontSize":20},
       "scale": {
         "domain": ["red", "blue", "draw"],
         "range": ["red", "blue", "lightgrey"]
