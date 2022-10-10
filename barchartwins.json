@@ -1,22 +1,28 @@
 {
   "width": 1000,
   "height": 500,
+  "background": "rgb(0, 0, 0)",
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/winner_by_year.csv"
   },
 
   "encoding": {
-    "y": {"field": "n", "type": "quantitative", "title": "number of wins"},
-    "x": {"field": "Date", "type": "ordinal", "title": "year"},
+    "y": {"field": "n", "type": "quantitative", "title": "number of wins","axis": {
+        "labelColor": "white", "grid":false}
+    },
+    "x": {"field": "Date", "type": "ordinal", "title": "year","axis": {
+        "labelColor": "white","labelAngle":0
+      }},
     "xOffset": {"field": "winby"},
     "color": {
       "field": "winby",
       "type": "nominal",
       "title": "Fight results",
+      "legend":{"labelColor":"white","labelFontSize":12},
       "scale": {
         "domain": ["DEC", "SUB", "DRAW", "KO/TKO"],
-        "range": ["green", "#984ea3", "black", "orange", "#FF0000", "#377eb8"]
+        "range": ["green", "#984ea3", "lightgrey", "orange"]
       }
     },
     "opacity": {"condition": {"param": "Win_method", "value": 1}, "value": 0.2},
@@ -48,14 +54,14 @@
       "mark": {"type": "text", "yOffset": -10},
       "encoding": {
         "text": {"field": "n", "type": "quantitative"},
-        "color": {"value": "black"}
+        "color": {"value": "white"}
       }
     },
     {
       "mark": {"type": "text", "yOffset": -22},
       "encoding": {
         "text": {"field": "winby", "type": "nominal"},
-        "color": {"value": "black"}
+        "color": {"value": "white"}
       }
     }
   ],
