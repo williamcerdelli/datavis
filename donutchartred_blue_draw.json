@@ -1,0 +1,53 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+    "url":"https://raw.githubusercontent.com/williamcerdelli/datavis/main/red_blue_draw.csv"},
+
+
+  "encoding": {
+    "theta": {"field": "n", "type": "quantitative"},
+    "color": {
+      "field": "winner",
+      "type": "nominal",
+      "title": "Fight results",
+      "scale": {
+        "domain": ["red", "blue", "draw"],
+        "range": ["red", "blue", "black"]
+      }
+    },
+    "opacity": {"condition": {"param": "Win_method", "value": 1}, "value": 0.2},
+    "tooltip": [
+      {"field": "winner", "type": "nominal", "title": "Result"},
+      {
+        "field": "proportion",
+        "type": "quantitative",
+        "title": "Percenatge of results by this way",
+        "format": ".2%"
+      },
+      {"field": "n", "type": "quantitative", "title": "Number of times"}
+    ]
+  },
+   "layer": [
+    {
+     "mark": {"type": "arc", "innerRadius": 70},
+      "params": [
+        {
+          "name": "Win_method",
+          "select": {"type": "point", "fields": ["winner"]},
+          "bind": "legend"
+        },
+        {
+          "name": "Fight_Year",
+          "bind": {
+            "input": "select",
+            "options": [null, "2014", "2015", "2016", "2017"],
+            "labels": ["Show All", "2014", "2015", "2016", "2017"],
+            "name": "Year Selection: "
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+}
