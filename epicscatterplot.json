@@ -7,7 +7,6 @@
   "data": {
     "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/epic.csv"
   },
-  "mark": "point",
   "encoding": {
     "x": {
       "field": "total_blue_strikes",
@@ -27,7 +26,11 @@
         "domain": ["red", "blue", "draw"],
         "range": ["red", "blue", "black"]
         }
-      },
+     
+     },
+
+    "opacity": {"condition": {"param": "winner", "value": 1}, "value": 0.2},
+    
     "tooltip": [
       {"field": "winner", "type": "nominal", "title": "Winner"},
       {
@@ -43,10 +46,38 @@
       {"field": "total_blue_strikes", "type": "quantitative", "title": "Blue significant strikes"},
        {"field": "total_red_strikes", "type": "quantitative", "title": "Red significant strikes"},
        {
-        "field": "winby",
+        "field": "winner",
         "type": "nominal",
-        "title": "Winning method"
+        "title": "winner"
       }
     ]
-  }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "cornerRadiusTopLeft": 3,
+        "cornerRadiusTopRight": 3
+      },
+      "params": [
+        {
+          "name": "winner",
+          "select": {"type": "point", "fields": ["winner"]},
+          "bind": "legend"
+        },
+        {
+          "name": "Fight_Year",
+          "bind": {
+            "input": "select",
+            "options": [null, "2014", "2015", "2016", "2017"],
+            "labels": ["Show All", "2014", "2015", "2016", "2017"],
+            "name": "Year Selection: "
+          }
+        }
+      ]
+    }
+  ]
+
+
+
 }
