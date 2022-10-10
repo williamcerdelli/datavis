@@ -3,6 +3,7 @@
   "height": 700,
 
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": "rgb(0, 0, 0)",
   "description": "A scatterplot showing body mass and flipper lengths of penguins.",
   "data": {
     "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/epic.csv"
@@ -11,20 +12,23 @@
     "x": {
       "field": "total_blue_strikes",
       "type": "quantitative",
-      "scale": {"zero": false}
+      "scale": {"zero": false},"axis": {
+        "labelColor": "white", "grid":false}
     },
     "y": {
       "field": "total_red_strikes",
       "type": "quantitative",
-      "scale": {"zero": false}
+      "scale": {"zero": false},"axis": {
+        "labelColor": "white", "grid":false}
     },
    "color": {
       "field": "winner",
       "type": "nominal",
+      "legend":{"labelColor":"white","labelFontSize":12},
       "title": "Winner",
       "scale": {
         "domain": ["red", "blue", "draw"],
-        "range": ["red", "blue", "black"]
+        "range": ["red", "blue", "lightgrey"]
         }
      
      },
@@ -81,7 +85,7 @@
     "fontWeight": "bold"},
       "encoding": {
         "text": {"field": "B_Name", "type": "nominal"},
-        "color": {"value": "black"},
+        "color": {"value": "white"},
         "opacity":{
           "condition":{
             "test":"(datum['total_blue_strikes']>300) && (datum['total_red_strikes']>300)",
@@ -96,7 +100,7 @@
     "fontWeight": "bold"},
       "encoding": {
         "text": {"field": "R_Name", "type": "nominal"},
-        "color": {"value": "black"},
+        "color": {"value": "white"},
         "opacity":{
           "condition":{
             "test":"(datum['total_blue_strikes']>300) && (datum['total_red_strikes']>300)",
@@ -110,7 +114,7 @@
       "mark": {"type": "text", "yOffset": -30,"xOffset":0, "text":"vs","fontSize": 13,
     "fontWeight": "bold"},
       "encoding": {
-        "color": {"value": "black"},
+        "color": {"value": "white"},
         "opacity":{
           "condition":{
             "test":"(datum['total_blue_strikes']>300) && (datum['total_red_strikes']>300)",
@@ -125,7 +129,13 @@
 
 
 
-  ]
+  ],
+   "config": {
+
+     "view": {
+     "stroke": "transparent"
+  }
+  }
 
 
 
