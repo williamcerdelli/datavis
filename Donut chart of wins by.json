@@ -11,7 +11,7 @@
       "bind": {
         "input": "select",
         "options": [null, "2014", "2015", "2016", "2017"],
-        "labels": ["Show All", "2014", "2015", "2016", "2017"],
+        "labels": ["All years", "2014", "2015", "2016", "2017"],
         "name": "Year Selection: "
       }
     }
