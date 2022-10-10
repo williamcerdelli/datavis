@@ -77,7 +77,8 @@
       ]
     },
       {
-      "mark": {"type": "text", "yOffset": -20,"xOffset":60},
+      "mark": {"type": "text", "yOffset": -20,"xOffset":67.5,"fontSize": 13,
+    "fontWeight": "bold"},
       "encoding": {
         "text": {"field": "B_Name", "type": "nominal"},
         "color": {"value": "black"},
@@ -91,7 +92,8 @@
         }
       },
       {
-      "mark": {"type": "text", "yOffset": -20,"xOffset":-40},
+      "mark": {"type": "text", "yOffset": -20,"xOffset":-57.5,"fontSize": 13,
+    "fontWeight": "bold"},
       "encoding": {
         "text": {"field": "R_Name", "type": "nominal"},
         "color": {"value": "black"},
@@ -105,7 +107,8 @@
         }
       },
       {
-      "mark": {"type": "text", "yOffset": -20,"xOffset":10, "text":"vs"},
+      "mark": {"type": "text", "yOffset": -20,"xOffset":5, "text":"vs","fontSize": 13,
+    "fontWeight": "bold"},
       "encoding": {
         "color": {"value": "black"},
         "opacity":{
