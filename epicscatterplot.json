@@ -1,0 +1,52 @@
+{
+  "width": 700,
+  "height": 700,
+
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A scatterplot showing body mass and flipper lengths of penguins.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/epic.csv"
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "total_blue_strikes",
+      "type": "quantitative",
+      "scale": {"zero": false}
+    },
+    "y": {
+      "field": "total_red_strikes",
+      "type": "quantitative",
+      "scale": {"zero": false}
+    },
+   "color": {
+      "field": "winner",
+      "type": "nominal",
+      "title": "Winner",
+      "scale": {
+        "domain": ["red", "blue", "draw"],
+        "range": ["red", "blue", "black"]
+        }
+      },
+    "tooltip": [
+      {"field": "winner", "type": "nominal", "title": "Winner"},
+      {
+        "field": "B_Name",
+        "type": "nominal",
+        "title": "Blue corner fighter"
+      },
+      {
+        "field": "R_Name",
+        "type": "nominal",
+        "title": "Red corner fighter"
+      },
+      {"field": "total_blue_strikes", "type": "quantitative", "title": "Blue significant strikes"},
+       {"field": "total_red_strikes", "type": "quantitative", "title": "Red significant strikes"},
+       {
+        "field": "winby",
+        "type": "nominal",
+        "title": "Winning method"
+      }
+    ]
+  }
+}
