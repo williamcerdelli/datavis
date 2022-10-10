@@ -1,0 +1,32 @@
+{
+  "width": 250,
+  "height": 200,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/fighterswins_dec.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "fighter", "type": "nominal","axis": {"labelAngle": -40},"sort":"-y"},
+    "y": {"field": "n", "type": "quantitative","title":"Decision wins",},
+     "color": {
+      "field": "winby",
+      "type": "nominal",
+      "title": "Win method",
+      "scale": {
+        "domain": [
+          "DEC"
+    ], "range": [
+
+          "green"
+          
+    ] }
+    },
+    "tooltip": [
+      {"field": "fighter", "type": "nominal", "title": "Fighter"},
+      {"field": "n", "type": "quantitative" , "title": "Number of decision wins"}
+    ]
+
+
+  }
+}
