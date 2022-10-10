@@ -8,7 +8,7 @@
   "mark": "bar",
   "encoding": {
     "x": {"field": "fighter", "type": "nominal","axis": {"labelAngle": -40},"sort":"-y"},
-    "y": {"field": "n", "type": "quantitative","title":"KO/TKO wins",},
+    "y": {"field": "n", "type": "quantitative","title":"KO/TKO wins"},
      "color": {
       "field": "winby",
       "type": "nominal",
