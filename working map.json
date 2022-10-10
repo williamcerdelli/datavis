@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 450,
-  "title": "Distribution of UFC fighters' countries of origin",
   "projection": {"type": "equalEarth"},
   "layer": [
     {
