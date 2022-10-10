@@ -1,14 +1,14 @@
 {
-  "width": 500,
-  "height": 150,
+  "width": 250,
+  "height": 200,
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A simple bar chart with embedded data.",
   "data": {
     "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/fighterswins_ko.csv"},
   "mark": "bar",
   "encoding": {
-    "y": {"field": "fighter", "type": "nominal", "sort":"-x"},
-    "x": {"field": "n", "type": "quantitative","title":"KO/TKO wins"},
+    "x": {"field": "fighter", "type": "nominal","axis": {"labelAngle": -40},"sort":"-y"},
+    "y": {"field": "n", "type": "quantitative","title":"KO/TKO wins",},
      "color": {
       "field": "winby",
       "type": "nominal",
