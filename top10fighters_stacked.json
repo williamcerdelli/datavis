@@ -1,0 +1,56 @@
+{
+  "width": 1000,
+  "height": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/top_10_main_fighterswins.csv"
+  },
+  
+  "params": [
+     {
+        "name": "Win_method",
+        "select":{"type":"point", "fields":["winby"]},
+        "bind":"legend"
+        }
+   
+  ],
+
+
+  "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+  "encoding": {
+    "x": {"field": "n", "type": "quantitative", "sort":"x"},
+    "y": {"field": "fighter", "type": "ordinal"},
+    
+    "color": {
+      "field": "winby",
+      "type": "nominal",
+      "title": "Win method",
+      "scale": {
+        "domain": [
+          "DEC",
+          "SUB",
+          "KO/TKO"
+    ], "range": [
+          "green",
+          "#984ea3",
+          "orange"
+          
+    ] }
+    },
+
+    "opacity": {
+        "condition": {"param": "Win_method", "value": 1},
+        "value": 0.2
+      },
+
+
+
+
+    "tooltip": [
+      {"field": "winby", "type": "nominal", "title": "Result"},
+      {"field": "n", "type": "quantitative" , "title": "Number of times"}
+    ]
+  },
+  
+  "config": {}
+}
