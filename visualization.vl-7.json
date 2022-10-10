@@ -1,0 +1,85 @@
+{
+  "width": 1000,
+  "height": 500,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/winner_by_year.csv"
+  },
+  "params": [
+    {
+      "name": "Fight_Year",
+      "bind": {
+        "input": "select",
+        "options": [null, "2014", "2015", "2016", "2017"],
+        "labels": ["Show All", "2014", "2015", "2016", "2017"],
+        "name": "Year Selection: "
+      }
+    }
+  ],
+  "transform": [{"filter": "Fight_Year == null || datum.Date == Fight_Year"}],
+  "encoding": {
+    "y": {"field": "n", "type": "quantitative", "title": "number of wins"},
+    "x": {"field": "Date", "type": "ordinal", "title": "year"},
+    "xOffset": {"field": "winby"},
+    "color": {
+      "field": "winby",
+      "type": "nominal",
+      "title": "Fight results",
+      "scale": {
+        "domain": ["DEC", "SUB", "DRAW", "KO/TKO"],
+        "range": ["skyblue", "#984ea3", "black", "RED", "#FF0000", "#377eb8"]
+      }
+    },
+    "opacity": {"condition": {"param": "Win_method", "value": 1}, "value": 0.2},
+    "tooltip": [
+      {"field": "winby", "type": "nominal", "title": "Result"},
+      {
+        "field": "proportion",
+        "type": "quantitative",
+        "title": "Percenatge of results by this way for this year",
+        "format": ".2%"
+      },
+      {"field": "n", "type": "quantitative", "title": "Number of times"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusTopLeft": 3,
+        "cornerRadiusTopRight": 3
+      },
+      "params": [
+        {
+          "name": "Win_method",
+          "select": {"type": "point", "fields": ["winby"]},
+          "bind": "legend"
+        },
+        {
+          "name": "Fight_Year",
+          "bind": {
+            "input": "select",
+            "options": [null, "2014", "2015", "2016", "2017"],
+            "labels": ["Show All", "2014", "2015", "2016", "2017"],
+            "name": "Year Selection: "
+          }
+        }
+      ]
+    },
+    {
+      "mark": {"type": "text", "yOffset": -10},
+      "encoding": {
+        "text": {"field": "n", "type": "quantitative"},
+        "color": {"value": "black"}
+      }
+    },
+    {
+      "mark": {"type": "text", "yOffset": -22},
+      "encoding": {
+        "text": {"field": "winby", "type": "nominal"},
+        "color": {"value": "black"}
+      }
+    }
+  ],
+  "config": {}
+}
