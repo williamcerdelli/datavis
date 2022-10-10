@@ -1,6 +1,7 @@
 {
   "width": 1000,
   "height": 200,
+  "background": "rgb(0, 0, 0)",
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/winner_by_year.csv"
@@ -24,7 +25,7 @@
           "2017"
         ],
         "labels": [
-          "Show All",
+          "All years",
           "2014",
           "2015",
           "2016",
@@ -43,13 +44,18 @@
 
   "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
   "encoding": {
-    "x": {"field": "proportion", "type": "quantitative"},
-    "y": {"field": "Date", "type": "ordinal"},
+    "x": {"field": "proportion", "type": "quantitative","axis": {
+        "labelColor": "white"
+      }},
+    "y": {"field": "Date", "type": "ordinal","axis": {
+        "labelColor": "white"
+      }},
     
     "color": {
       "field": "winby",
       "type": "nominal",
       "title": "Continents/Regions",
+      "legend":{"labelColor":"white","labelFontSize":12},
       "scale": {
         "domain": [
           "DEC",
@@ -59,7 +65,7 @@
     ], "range": [
           "skyblue",
           "#984ea3",
-          "black",
+          "lightgrey",
           "RED",
           "#FF0000",
           "#377eb8",
