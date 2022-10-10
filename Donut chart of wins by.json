@@ -2,8 +2,22 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A simple donut chart with embedded data.",
   "data": {
-    "url":"https://raw.githubusercontent.com/williamcerdelli/datavis/main/winner_by.csv"},
-  "mark": {"type": "arc", "innerRadius": 50},
+    "url":"https://raw.githubusercontent.com/williamcerdelli/datavis/main/winner_by_year.csv"},
+
+"params": [
+    {
+      "name": "Fight_Year",
+      "bind": {
+        "input": "select",
+        "options": [null, "2014", "2015", "2016", "2017"],
+        "labels": ["Show All", "2014", "2015", "2016", "2017"],
+        "name": "Year Selection: "
+      }
+    }
+  ],
+
+ "transform": [{"filter": "Fight_Year == null || datum.Date == Fight_Year"}],
+
   "encoding": {
     "theta": {"field": "n", "type": "quantitative"},
     "color": {
@@ -13,13 +27,40 @@
       "scale": {
         "domain": ["DEC", "SUB", "DRAW", "KO/TKO"],
         "range": ["skyblue", "#984ea3", "black", "RED", "#FF0000", "#377eb8"]
-      },
+      }
+    },
+    "opacity": {"condition": {"param": "Win_method", "value": 1}, "value": 0.2},
     "tooltip": [
       {"field": "winby", "type": "nominal", "title": "Result"},
-      {"field": "n", "type": "quantitative" , "title": "Number of times"}
+      {
+        "field": "proportion",
+        "type": "quantitative",
+        "title": "Percenatge of results by this way for this year",
+        "format": ".2%"
+      },
+      {"field": "n", "type": "quantitative", "title": "Number of times"}
     ]
-    
+  },
+   "layer": [
+    {
+     "mark": {"type": "arc", "innerRadius": 50},
+      "params": [
+        {
+          "name": "Win_method",
+          "select": {"type": "point", "fields": ["winby"]},
+          "bind": "legend"
+        },
+        {
+          "name": "Fight_Year",
+          "bind": {
+            "input": "select",
+            "options": [null, "2014", "2015", "2016", "2017"],
+            "labels": ["Show All", "2014", "2015", "2016", "2017"],
+            "name": "Year Selection: "
+          }
+        }
+      ]
     }
-  
-}
+  ],
+  "config": {}
 }
