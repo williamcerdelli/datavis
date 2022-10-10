@@ -6,7 +6,14 @@
   "mark": {"type": "arc", "innerRadius": 50},
   "encoding": {
     "theta": {"field": "n", "type": "quantitative"},
-    "color": {"field": "winby", "type": "nominal"},
+    "color": {
+      "field": "winby",
+      "type": "nominal",
+      "title": "Fight results",
+      "scale": {
+        "domain": ["DEC", "SUB", "DRAW", "KO/TKO"],
+        "range": ["skyblue", "#984ea3", "black", "RED", "#FF0000", "#377eb8"]
+      },
     "tooltip": [
       {"field": "winby", "type": "nominal", "title": "Result"},
       {"field": "n", "type": "quantitative" , "title": "Number of times"}
