@@ -73,9 +73,55 @@
             "labels": ["Show All", "2014", "2015", "2016", "2017"],
             "name": "Year Selection: "
           }
-        }
+        } 
       ]
-    }
+    },
+      {
+      "mark": {"type": "text", "yOffset": -20,"xOffset":60},
+      "encoding": {
+        "text": {"field": "B_Name", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity":{
+          "condition":{
+            "test":"(datum['total_blue_strikes']>300) && (datum['total_red_strikes']>300)",
+            "value":1
+          },
+          "value":0
+        }
+        }
+      },
+      {
+      "mark": {"type": "text", "yOffset": -20,"xOffset":-40},
+      "encoding": {
+        "text": {"field": "R_Name", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity":{
+          "condition":{
+            "test":"(datum['total_blue_strikes']>300) && (datum['total_red_strikes']>300)",
+            "value":1
+          },
+          "value":0
+        }
+        }
+      },
+      {
+      "mark": {"type": "text", "yOffset": -20,"xOffset":10, "text":"vs"},
+      "encoding": {
+        "color": {"value": "black"},
+        "opacity":{
+          "condition":{
+            "test":"(datum['total_blue_strikes']>300) && (datum['total_red_strikes']>300)",
+            "value":1
+          },
+          "value":0
+        }
+        }
+      }
+      
+
+
+
+
   ]
 
 
