@@ -51,10 +51,6 @@
   ],
   "config": {
 
-    "background": "black",
-  "group": {
-    "fill": "#dedede"
-  }
 
   }
 }
