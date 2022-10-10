@@ -13,7 +13,7 @@
       "title": "Fight results",
       "scale": {
         "domain": ["red", "blue", "draw"],
-        "range": ["red", "blue", "black"]
+        "range": ["red", "blue", "lightgrey"]
       }
     },
     "opacity": {"condition": {"param": "Win_method", "value": 1}, "value": 0.2},
@@ -49,5 +49,12 @@
       ]
     }
   ],
-  "config": {}
+  "config": {
+
+    "background": "black",
+  "group": {
+    "fill": "#dedede"
+  }
+
+  }
 }
