@@ -49,7 +49,7 @@
           "field": "continent",
           "type": "nominal",
           "title": "Continents/Regions",
-          "legend":{"labelColor":"white","labelFontSize":20},
+          "legend":{"labelColor":"white","labelFontSize":15},
           "scale": {
             "domain": [
               "Northern America",
