@@ -18,8 +18,8 @@
 
   "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
   "encoding": {
-    "x": {"field": "n", "type": "quantitative", "sort":"x"},
-    "y": {"field": "fighter", "type": "ordinal"},
+    "x": {"field": "n", "type": "quantitative"},
+    "y": {"field": "fighter", "type": "ordinal","sort":"-x"},
     
     "color": {
       "field": "winby",
