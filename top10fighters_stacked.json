@@ -1,6 +1,7 @@
 {
   "width": 1000,
   "height": 400,
+  "background": "rgb(0, 0, 0)",
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/top_10_main_fighterswins.csv"
@@ -18,13 +19,17 @@
 
   "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
   "encoding": {
-    "x": {"field": "n", "type": "quantitative"},
-    "y": {"field": "fighter", "type": "ordinal","sort":"-x"},
+    "x": {"field": "n", "type": "quantitative","axis": {
+        "labelColor": "white", "grid":false}},
+    "y": {"field": "fighter", "type": "ordinal","sort":"-x","axis": {
+        "labelColor": "white","labelAngle":0
+      }},
     
     "color": {
       "field": "winby",
       "type": "nominal",
       "title": "Win method",
+      "legend":{"labelColor":"white","labelFontSize":12},
       "scale": {
         "domain": [
           "DEC",
