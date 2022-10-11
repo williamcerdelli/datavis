@@ -1,6 +1,6 @@
 {
-  "width": 800,
-  "height": 800,
+  "width": 700,
+  "height": 700,
 
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "background": "rgb(0, 0, 0)",
@@ -13,18 +13,16 @@
       "field": "total_blue_strikes",
       "type": "quantitative",
       "scale": {"zero": false},"axis": {
-        "labelColor": "white", "grid":false}
-    },
+        "labelColor": "white","labelFontSize":14, "grid":false, "tickMinStep":100,"title":"Total signficants strikes landed by blue","titleFontSize":14, "titleColor":"white", "titleY":40}},
     "y": {
       "field": "total_red_strikes",
       "type": "quantitative",
       "scale": {"zero": false},"axis": {
-        "labelColor": "white", "grid":false}
-    },
+        "labelColor": "white","labelFontSize":14, "grid":false, "tickMinStep":100,"titleColor":"white", "title":"Total signficants strikes landed by red","titleFontSize":14, "titleX":-50}},
    "color": {
       "field": "winner",
       "type": "nominal",
-      "legend":{"labelColor":"white","labelFontSize":12},
+      "legend":{"fillColor":"black","labelColor":"white","direction": "vertical","orient": "none","legendY":-40,"legendX":650,"titleColor":"white","titleLimit":500,"titleFontSize":14,"symbolFillColor":"black","titleAlign":"center","labelFontSize":14, "titleAnchor":"middle"},
       "title": "Winner",
       "scale": {
         "domain": ["red", "blue", "draw"],
@@ -48,12 +46,7 @@
         "title": "Red corner fighter"
       },
       {"field": "total_blue_strikes", "type": "quantitative", "title": "Blue significant strikes"},
-       {"field": "total_red_strikes", "type": "quantitative", "title": "Red significant strikes"},
-       {
-        "field": "winner",
-        "type": "nominal",
-        "title": "winner"
-      }
+       {"field": "total_red_strikes", "type": "quantitative", "title": "Red significant strikes"}
     ]
   },
   "layer": [
