@@ -18,6 +18,7 @@
     "color": {
       "field": "winby",
       "type": "nominal",
+      "legend": null,
       "title": "Fight results",
       "scale": {
         "domain": ["DEC", "SUB", "DRAW", "KO/TKO"],
