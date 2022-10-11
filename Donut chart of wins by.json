@@ -65,7 +65,7 @@
       ]
     },
     {
-      "mark": {"type": "text", "yOffset": 150,"xOffset":0, "text":"vs","fontSize": 13,
+      "mark": {"type": "text", "yOffset": 105,"xOffset":0, "text":"vs","fontSize": 13,
     "fontWeight": "bold"},
       "encoding": {
         "color": {"value": "black"}
