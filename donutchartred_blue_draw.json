@@ -11,8 +11,8 @@
     "color": {
       "field": "winner",
       "type": "nominal",
-      "title": "Fight result",
-      "legend":{"fillColor":"black","labelColor":"white","labelFontSize":14,"direction": "horizontal","orient": "none","legendY":-40,"legendX":40,"titleColor":"white","titleLimit":500,"symbolFillColor":"black","titleAlign":"left"},
+      "title": "",
+      "legend":{"fillColor":"black","labelColor":"white","labelFontSize":14,"direction": "horizontal","orient": "none","legendY":-30,"legendX":30,"titleColor":"white","titleLimit":500,"symbolFillColor":"black","titleAlign":"left"},
       "scale": {
         "domain": ["red", "blue", "draw"],
         "range": ["red", "blue", "lightgrey"]
