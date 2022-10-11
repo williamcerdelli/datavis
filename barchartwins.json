@@ -19,7 +19,6 @@
       "field": "winby",
       "type": "nominal",
       "title": "Fight results",
-      "legend":{"labelColor":"white","labelFontSize":12},
       "scale": {
         "domain": ["DEC", "SUB", "DRAW", "KO/TKO"],
         "range": ["green", "#984ea3", "lightgrey", "orange"]
