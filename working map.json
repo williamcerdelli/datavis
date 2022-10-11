@@ -5,6 +5,7 @@
   "background":"black",
   "projection": {"type": "equalEarth"},
   "layer": [
+    
     {
       "data": {
         "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/water",
@@ -42,14 +43,15 @@
         "size": {
           "field": "Proportion of fighters",
           "type": "quantitative",
-          "title": "Percentage of UFC fighters",
-          "scale": {"domain": [1e-8, 5, 10, 20, 30, 50]}
+          "title": "Percenatage of fighters",
+          "scale": {"domain": [1e-8, 5, 10, 20, 30, 50]},
+          "legend":{"fillColor":"black","labelColor":"white","direction": "horizontal","orient": "none","legendY":460,"legendX":200,"titleColor":"white","titleLimit":500,"symbolFillColor":"black","titleAlign":"left"}
         },
         "color": {
           "field": "continent",
           "type": "nominal",
           "title": "Continents/Regions",
-          "legend":{"labelColor":"white","labelFontSize":12},
+          "legend":{"labelColor":"white","labelFontSize":12,"direction": "horizontal","orient": "none","legendY":-20,"legendX":120},
           "scale": {
             "domain": [
               "Northern America",
@@ -99,5 +101,10 @@
       "mark": {"type": "geoshape", "fill": null, "stroke": "grey"}
     }
   ],
-  "config": {}
+  "config": {
+
+
+
+
+  }
 }
