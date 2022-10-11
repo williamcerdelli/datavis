@@ -9,10 +9,10 @@
 
   "encoding": {
     "y": {"field": "n", "type": "quantitative", "title": "number of wins","axis": {
-        "labelColor": "white", "grid":false}
+        "labelColor": "black", "grid":false, "domain": false,"ticks": false}
     },
     "x": {"field": "Date", "type": "ordinal", "title": "year","axis": {
-        "labelColor": "white","labelAngle":0
+        "labelColor": "white","labelAngle":0, "labelFontSize":14
       }},
     "xOffset": {"field": "winby"},
     "color": {
