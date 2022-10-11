@@ -45,7 +45,7 @@
           "type": "quantitative",
           "title": "Percenatage of fighters",
           "scale": {"domain": [1e-8, 5, 10, 20, 30, 50]},
-          "legend":{"fillColor":"black","labelColor":"white","direction": "horizontal","orient": "none","legendY":460,"legendX":200,"titleColor":"white","titleLimit":500,"symbolFillColor":"black","titleAlign":"left"}
+          "legend":{"fillColor":"black","labelColor":"white","direction": "horizontal","orient": "none","legendY":430,"legendX":200,"titleColor":"white","titleLimit":500,"symbolFillColor":"black","titleAlign":"left"}
         },
         "color": {
           "field": "continent",
