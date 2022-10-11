@@ -61,8 +61,17 @@
             "name": "Year Selection: "
           }
         }
+
       ]
-    }
+    },
+    {
+      "mark": {"type": "text", "yOffset": 150,"xOffset":0, "text":"vs","fontSize": 13,
+    "fontWeight": "bold"},
+      "encoding": {
+        "color": {"value": "black"}
+        
+        }
+      }
   ],
   "config": {}
 }
