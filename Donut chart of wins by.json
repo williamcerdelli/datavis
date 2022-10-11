@@ -25,7 +25,7 @@
       "field": "winby",
       "type": "nominal",
       "title": "Fight results",
-      "legend":{"labelColor":"white","labelFontSize":12,"legendX":800,"orient": "none"},
+      "legend":{"labelColor":"white","labelFontSize":14,"legendX":800,"legendY":50,"orient": "none"},
       "scale": {
         "domain": ["DEC", "SUB", "DRAW", "KO/TKO"],
         "range": ["green", "#984ea3", "lightgrey", "orange"]
@@ -64,14 +64,7 @@
 
       ]
     },
-    {
-      "mark": {"type": "text", "yOffset": 105,"xOffset":500, "text":"vs","fontSize": 13,
-    "fontWeight": "bold"},
-      "encoding": {
-        "color": {"value": "black"}
-        
-        }
-      }
+    
   ],
   "config": {}
 }
