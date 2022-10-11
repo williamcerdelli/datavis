@@ -10,7 +10,7 @@
         "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/water",
         "format": {"type": "topojson", "feature": "oceans"}
       },
-      "mark": {"type": "geoshape", "fill": "black"}
+      "mark": {"type": "geoshape", "fill": "skyblue"}
     },
     {
       "data": {
