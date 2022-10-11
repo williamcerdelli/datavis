@@ -1,5 +1,4 @@
-{
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 450,
   "background":"black",
@@ -45,13 +44,13 @@
           "type": "quantitative",
           "title": "Percenatage of fighters",
           "scale": {"domain": [1e-8, 5, 10, 20, 30, 50]},
-          "legend":{"fillColor":"black","labelColor":"white","direction": "horizontal","orient": "none","legendY":-85,"legendX":200,"titleColor":"white","titleLimit":500,"symbolFillColor":"black","titleAlign":"left"}
+          "legend":{"fillColor":"black","labelColor":"white","direction": "horizontal","orient": "none","legendY":-85,"legendX":200,"titleColor":"white","titleLimit":500,"titleFontSize":14,"symbolFillColor":"black","titleAlign":"center","labelFontSize":14, "titleAnchor":"middle"}
         },
         "color": {
           "field": "continent",
           "type": "nominal",
           "title": "Continents/Regions",
-          "legend":{"labelColor":"white","labelFontSize":12,"direction": "horizontal","orient": "none","legendY":-12,"legendX":120},
+          "legend":{"labelColor":"white","labelFontSize":14,"direction": "horizontal","orient": "none","legendY":-12,"legendX":70},
           "scale": {
             "domain": [
               "Northern America",
