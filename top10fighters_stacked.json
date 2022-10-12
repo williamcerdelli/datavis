@@ -7,23 +7,16 @@
     "url": "https://raw.githubusercontent.com/williamcerdelli/datavis/main/top_10_main_fighterswins.csv"
   },
   
-  "params": [
-     {
-        "name": "Win_method",
-        "select":{"type":"point", "fields":["winby"]},
-        "bind":"legend"
-        }
-   
-  ],
-
-
-  "mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+ 
   "encoding": {
     "x": {"field": "n", "type": "quantitative","axis": {
         "labelColor": "white","labelFontSize":14, "grid":false, "tickMinStep":1}},
-    "y": {"field": "fighter", "type": "ordinal","sort":"-x","axis": {
-        "labelColor": "white","labelFontSize":14,"labelAngle":0, "domain": false, "ticks": false
-      }},
+    "y": {"field": "fighter", "type": "ordinal","sort":"-x",
+          "axis": {
+            "labelColor": "white","labelFontSize":14,"labelAngle":0,
+            "domain": false,    "ticks": false
+          }
+        },
     
     "color": {
       "field": "winby",
@@ -42,20 +35,34 @@
           
     ] }
     },
-
     "opacity": {
         "condition": {"param": "Win_method", "value": 1},
         "value": 0.2
       },
-
-
-
-
+      
     "tooltip": [
       {"field": "winby", "type": "nominal", "title": "Result"},
       {"field": "n", "type": "quantitative" , "title": "Number of times"}
     ]
   },
+
+"layer": [{
+"mark": {"type": "bar", "cornerRadiusTopLeft": 3, "cornerRadiusTopRight": 3},
+ "params": [
+     {
+        "name": "Win_method",
+        "select":{"type":"point", "fields":["winby"]},
+        "bind":"legend"
+        }
+   
+  ]
+
+
+  }
+
+  
+  ],
+  
   
  "config": {
 
