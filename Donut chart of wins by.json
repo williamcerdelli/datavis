@@ -8,16 +8,17 @@
 "params": [
     {
       "name": "Fight_Year",
+      "value": "2014",
       "bind": {
         "input": "select",
-        "options": ["null","2014", "2015", "2016", "2017"],
-        "labels": ["null","2014", "2015", "2016", "2017"],
+        "options": ["2014", "2015", "2016", "2017"],
+        "labels": ["2014", "2015", "2016", "2017"],
         "name": "Year Selection"
       }
     }
   ],
 
- "transform": [{"filter": "datum.Date == Fight_Year"}],
+ "transform": [{"filter":"datum.Date == Fight_Year"}],
 
   "encoding": {
     "theta": {"field": "n", "type": "quantitative"},
