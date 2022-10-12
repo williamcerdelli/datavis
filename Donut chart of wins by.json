@@ -10,14 +10,14 @@
       "name": "Fight_Year",
       "bind": {
         "input": "select",
-        "options": [null, "2014", "2015", "2016", "2017"],
-        "labels": ["All years", "2014", "2015", "2016", "2017"],
+        "options": ["null","2014", "2015", "2016", "2017"],
+        "labels": ["null","2014", "2015", "2016", "2017"],
         "name": "Year Selection"
       }
     }
   ],
 
- "transform": [{"filter": "Fight_Year == null || datum.Date == Fight_Year"}],
+ "transform": [{"filter": "datum.Date == Fight_Year"}],
 
   "encoding": {
     "theta": {"field": "n", "type": "quantitative"},
@@ -25,7 +25,7 @@
       "field": "winby",
       "type": "nominal",
       "title": "Fight results",
-      "legend":{"labelColor":"white","labelFontSize":14,"legendX":600,"legendY":50,"orient": "none"},
+      "legend":{"labelColor":"white","labelFontSize":14,"legendX":300,"legendY":50,"orient": "none"},
       "scale": {
         "domain": ["DEC", "SUB", "DRAW", "KO/TKO"],
         "range": ["green", "#984ea3", "lightgrey", "orange"]
