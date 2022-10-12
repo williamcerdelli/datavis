@@ -64,9 +64,9 @@
             "range": [
               "#FFFF00",
               "#984ea3",
-              "lightgrey",
+              "red",
               "#ff7f00",
-              "#FF0000",
+              "white",
               "#377eb8",
               "#a65628"
             ]
